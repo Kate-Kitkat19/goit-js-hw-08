@@ -1,0 +1,22 @@
+{
+  "name": "goit-js-hw-08",
+  "version": "0.0.1",
+  "description": "HW-8 Parcel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kate-Kitkat19/goit-js-hw-08.git"
+  },
+  "author": "Kate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kate-Kitkat19/goit-js-hw-08/issues"
+  },
+  "homepage": "https://github.com/Kate-Kitkat19/goit-js-hw-08#readme",
+  "dependencies": {
+    "joi": "^17.6.0"
+  }
+}
