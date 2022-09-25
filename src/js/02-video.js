@@ -1,5 +1,6 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
+import { save, load, remove } from './locstorage';
 
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
@@ -11,17 +12,17 @@ function getTime() {
   player
     .getCurrentTime()
     .then(function (seconds) {
-      localStorage.setItem(KEY_NAME, JSON.stringify(seconds));
+      save(KEY_NAME, seconds);
     })
     .catch(function (error) {
       console.log(error);
     });
 }
 
-const currentTime = localStorage.getItem(KEY_NAME);
+const currentTime = load(KEY_NAME);
 
 player
-  .setCurrentTime(JSON.parse(currentTime))
+  .setCurrentTime(currentTime)
   .then(function (seconds) {
     // seconds = the actual time that the player seeked to
   })
@@ -36,4 +37,3 @@ player
         break;
     }
   });
-
